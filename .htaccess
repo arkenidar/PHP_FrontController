@@ -1,3 +1,2 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule (.*) _.php?file=$1 [L]
+RewriteRule (.*)\.php$ intercept_php.php?file=$1 [L,QSA]
